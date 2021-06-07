@@ -7,7 +7,7 @@ const Phaltu = (props) => {
   const [value, setvalue] = useState([]);
   const getData = async () => {
     const res = await fetch(
-      "http://51.143.173.5/api/developer/matchapi.php?Action=listCompetitions&EventTypeID=" +
+      "51.143.173.5/api/developer/matchapi.php?Action=listCompetitions&EventTypeID=" +
         Id
     );
     const response = await res.json();
