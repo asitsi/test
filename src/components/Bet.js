@@ -19,7 +19,7 @@ const Bet = (props) => {
   }, []);
 
   setInterval(getData, 2000);
-  if (value == 0) {
+  if (value === 0) {
   } else {
     return (
       <div>
