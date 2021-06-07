@@ -21,7 +21,7 @@ const Leagename = (props) => {
   useEffect(() => {
     getdata();
   }, []);
-  if (data == 0) {
+  if (data === 0) {
     return (
       <div>
         <h1>NO DATA</h1>
