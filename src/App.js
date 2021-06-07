@@ -9,17 +9,17 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route exact path="/:gamename" component={Phaltu} />
-        <Route exact path="/:gamename/:leageName" component={Leagename} />
+        <Route path="/test/" exact component={Home} />
+        <Route exact path="/test/:gamename" component={Phaltu} />
+        <Route exact path="/test/:gamename/:leageName" component={Leagename} />
         <Route
           exact
-          path="/:gamename/:leageName/:matchname"
+          path="/test/:gamename/:leageName/:matchname"
           component={Match}
         />
         <Route
           exact
-          path="/:gamename/:leageName/:matchname/:bet"
+          path="/test/:gamename/:leageName/:matchname/:bet"
           component={Bet}
         />
       </Switch>
