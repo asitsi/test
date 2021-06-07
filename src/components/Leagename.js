@@ -8,7 +8,7 @@ const Leagename = (props) => {
   const [data, setData] = useState([]);
   const getdata = async () => {
     const res = await fetch(
-      "http://51.143.173.5/api/developer/matchapi.php?Action=listEvents&EventTypeID=" +
+      "51.143.173.5/api/developer/matchapi.php?Action=listEvents&EventTypeID=" +
         EventId +
         "&CompetitionID=" +
         Id
