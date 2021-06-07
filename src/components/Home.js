@@ -5,7 +5,7 @@ const Home = () => {
   const [data, setData] = useState([]);
   const getData = async () => {
     const res = await fetch(
-      "https://51.143.173.5/api/developer/matchapi.php?Action=listEventTypes"
+      "http://51.143.173.5/api/developer/matchapi.php?Action=listEventTypes"
     );
     const value = await res.json();
     setData(value);
