@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Home from "./components/Home";
+import Phaltu from "./components/Phaltu";
+import Leagename from "./components/Leagename";
+import Match from "./components/Match";
+import Bet from "./components/Bet";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route exact path="/:gamename" component={Phaltu} />
+        <Route exact path="/:gamename/:leageName" component={Leagename} />
+        <Route
+          exact
+          path="/:gamename/:leageName/:matchname"
+          component={Match}
+        />
+        <Route
+          exact
+          path="/:gamename/:leageName/:matchname/:bet"
+          component={Bet}
+        />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
