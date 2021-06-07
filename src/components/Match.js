@@ -8,7 +8,7 @@ const Match = (props) => {
   const [value, setvalue] = useState([]);
   const getData = async () => {
     const res = await fetch(
-      "https://51.143.173.5/api/developer/matchapi.php?Action=listMarketTypes&EventID=" +
+      "http://51.143.173.5/api/developer/matchapi.php?Action=listMarketTypes&EventID=" +
         Id +
         "&sportId=" +
         EventId
